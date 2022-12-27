@@ -92,7 +92,7 @@ export default function Home() {
                 </Flex>
             </Flex>
 
-            <Flex h={["20vh" , "30vh" , "40vh" , "40vh"]} w="90vw" />
+            <Flex h={["20vh", "30vh", "40vh", "40vh"]} w="90vw" />
 
             <Heading fontSize="xl">New Products</Heading>
 
@@ -186,7 +186,14 @@ export default function Home() {
                 })}
             </Flex>
             {cartItems.length > 0 && (
-                <Button onClick={() => console.log(cartItems)}>Checkout</Button>
+                <Button
+                    onClick={() => {
+                        console.log(cartItems);
+                        console.log("Total Amount : " + totalAmount);
+                    }}
+                >
+                    Checkout
+                </Button>
             )}
         </Flex>
     );
